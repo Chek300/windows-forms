@@ -15,6 +15,7 @@ namespace forms_testing
 {
     public partial class print_options : Form
     {
+        
         public print_options()
         {
             InitializeComponent();
@@ -22,10 +23,26 @@ namespace forms_testing
 
         private void printLocation_Click(object sender, EventArgs e)
         {
-            Bitmap baseImage;
-            Bitmap overlayImage;
+            /*
+             * get the base image and the overlay image
+             */
 
-            baseImage = (Bitmap)Image.FromFile(@"C:\Users\Brandt\Desktop\img6060.jpg");
+
+
+            Image baseImage = Image.FromFile(@"C:\Users\Brandt\Desktop\capimages\img6060.jpg");
+            Bitmap overlayImage;
+            var principalForm = Application.OpenForms.OfType<verticle_pos>().Single();
+            
+            foreach (var prop in baseImage.PropertyItems)
+            {
+                if (prop.Id == 0x0112) // value of EXIF
+                {
+                    int orientationValue = baseImage.GetPropertyItem(prop.Id).Value[0];
+                    RotateFlipType rotateFlipType = principalForm.GetOrientationToFlipType(orientationValue);
+                    baseImage.RotateFlip(rotateFlipType);
+                    break;
+                }
+            }
 
             overlayImage = (Bitmap)Image.FromFile(@"C:\Users\Brandt\Desktop\6x8.png");
 
@@ -33,11 +50,11 @@ namespace forms_testing
             var graphics = Graphics.FromImage(finalImage);
             graphics.CompositingMode = CompositingMode.SourceOver;
 
-            graphics.DrawImage(baseImage, 0, 0);
+            graphics.DrawImage((Bitmap)baseImage, 0, 0);
             graphics.DrawImage(overlayImage, 0, 0);
 
             //save the final composite image to disk
-            finalImage.Save(@"C:\Users\Brandt\Desktop\composite.png", ImageFormat.Jpeg);
+            finalImage.Save(@"C:\Users\Brandt\Desktop\capimages\composite.png", ImageFormat.Jpeg);
         }
     }
 }

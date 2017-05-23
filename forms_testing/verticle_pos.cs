@@ -14,11 +14,19 @@ namespace forms_testing
 { 
     public partial class verticle_pos : Form
     {
+        public static verticle_pos Form;
+
+        /*static void Main()
+        {
+            Form = new verticle_pos();
+            Application.Run(Form);
+        }
+        */
 
         public string[] images = Directory.GetFiles(startup.images);
         public int cursor = 0;
 
-        private static RotateFlipType GetOrientationToFlipType(int orientationValue)
+        public RotateFlipType GetOrientationToFlipType(int orientationValue)
         {
             RotateFlipType rotateFlipType = RotateFlipType.RotateNoneFlipNone;
 

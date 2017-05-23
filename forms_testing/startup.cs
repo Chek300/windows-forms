@@ -14,6 +14,7 @@ namespace forms_testing
 
     public partial class startup : Form
     {
+        
         public static string defaultOverlay;
         public static string images;
         public static string imagePathTxt = @"C:\Users\Brandt\Documents\Visual Studio 2017\Projects\forms_testing\forms_testing\imagePath.txt";
