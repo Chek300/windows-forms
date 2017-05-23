@@ -12,13 +12,13 @@ using System.IO;
 namespace forms_testing
 {
 
-    public partial class Form1 : Form
+    public partial class startup : Form
     {
         public static string defaultOverlay;
         public static string images;
         public static string imagePathTxt = @"C:\Users\Brandt\Documents\Visual Studio 2017\Projects\forms_testing\forms_testing\imagePath.txt";
         public static string defaultOverlayTxt = @"C:\Users\Brandt\Documents\Visual Studio 2017\Projects\forms_testing\forms_testing\defaultOverlay.txt";
-        public Form1()
+        public startup()
         {
             InitializeComponent();
             testConfig();
@@ -26,7 +26,7 @@ namespace forms_testing
 
         private void showConfig()
         {
-            Form2 frm = new Form2();
+            config frm = new config();
             frm.Show();
         }
         private void testConfig()
@@ -71,7 +71,7 @@ namespace forms_testing
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 frm = new Form3();
+            verticle_pos frm = new verticle_pos();
             frm.Show();
         }
     }
