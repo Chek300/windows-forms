@@ -11,10 +11,11 @@ using System.Diagnostics;
 using System.IO;
 
 namespace forms_testing
-{
+{ 
     public partial class verticle_pos : Form
     {
-        public string[] images = Directory.GetFiles(startup.imagePathTxt);
+
+        public string[] images = Directory.GetFiles(startup.images);
         public int cursor = 0;
 
         private static RotateFlipType GetOrientationToFlipType(int orientationValue)
@@ -78,6 +79,7 @@ namespace forms_testing
                 }
             }
             pictureBox1.BackgroundImage = img;
+            
         }
 
         public verticle_pos()
@@ -86,14 +88,15 @@ namespace forms_testing
             pictureBox1.DoubleClick += new EventHandler(pictureBox1_DoubleClick);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Load(startup.defaultOverlayTxt);
+            pictureBox1.Load(startup.defaultOverlay);
             loadImage(0);
         }
        
-        private void button4_Click(object sender, EventArgs e)
+
+        private void printOptions_Click(object sender, EventArgs e)
         {
-            //Print Options button
-            //load new print options form (make composite image) and save to multiple locations
+            print_options frm = new print_options();
+            frm.Show();
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -128,14 +131,21 @@ namespace forms_testing
 
         private void leftBtn_Click(object sender, EventArgs e)
         {
-            cursor--;
-            loadImage(cursor);
+            if (cursor > 0)
+            {
+                cursor--;
+                loadImage(cursor);
+            }
+            
         }
 
         private void rightBtn_Click(object sender, EventArgs e)
         {
-            cursor++;
-            loadImage(cursor);
+            if (cursor < images.Length - 1)
+            {
+                cursor++;
+                loadImage(cursor);
+            }
         }
     }
 }

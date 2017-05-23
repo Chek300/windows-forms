@@ -2,10 +2,11 @@ c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testin
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\bin\Debug\forms_testing.exe
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\bin\Debug\forms_testing.pdb
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.csprojResolveAssemblyReference.cache
-c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.Form1.resources
-c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.Form2.resources
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.Properties.Resources.resources
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.csproj.GenerateResource.Cache
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.exe
 c:\users\brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.pdb
-C:\Users\Brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.Form3.resources
+C:\Users\Brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.print_options.resources
+C:\Users\Brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.startup.resources
+C:\Users\Brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.config.resources
+C:\Users\Brandt\documents\visual studio 2017\Projects\forms_testing\forms_testing\obj\Debug\forms_testing.verticle_pos.resources

@@ -39,9 +39,9 @@ namespace forms_testing
             if (result == DialogResult.OK)
             {
                 string path = folderBrowserDialog1.SelectedPath;
+                startup.images = path;
                 writeConfig(startup.imagePathTxt, path);
                 //write the image path to the first line in the config file
-                //Form1.images = Directory.GetFiles(folderBrowserDialog1.SelectedPath);
                 Debug.WriteLine("Files found: " + Directory.GetFiles(folderBrowserDialog1.SelectedPath).Length.ToString());
             }
         }
@@ -51,9 +51,9 @@ namespace forms_testing
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
+                startup.defaultOverlay = openFileDialog1.FileName;
                 writeConfig(startup.defaultOverlayTxt, openFileDialog1.FileName);
                 //write the default overlay to the second line in the config file
-                //Form1.defaultOverlay = openFileDialog1.FileName;
             }
         }
     }

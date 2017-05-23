@@ -84,7 +84,7 @@
             this.printOptions.TabIndex = 4;
             this.printOptions.Text = "Print Options";
             this.printOptions.UseVisualStyleBackColor = true;
-            this.printOptions.Click += new System.EventHandler(this.button4_Click);
+            this.printOptions.Click += new System.EventHandler(this.printOptions_Click);
             // 
             // Form3
             // 
