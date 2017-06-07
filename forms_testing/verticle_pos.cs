@@ -16,13 +16,6 @@ namespace forms_testing
     {
         public static verticle_pos Form;
 
-        /*static void Main()
-        {
-            Form = new verticle_pos();
-            Application.Run(Form);
-        }
-        */
-
         public string[] images = Directory.GetFiles(startup.images);
         public int cursor = 0;
 
@@ -73,6 +66,14 @@ namespace forms_testing
                 SetStyle(ControlStyles.StandardClick | ControlStyles.StandardDoubleClick, true);
             }
         }
+        private void imageSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //TODO: Search the images folder for the 4 digit string, display the first image that matches
+            }
+        }
+
         public void loadImage(int pointer)
         {
             Image img = Image.FromFile(images[pointer]);
@@ -116,7 +117,7 @@ namespace forms_testing
                 leftBtn.Visible = false;
                 rightBtn.Visible = false;
                 printOptions.Visible = false;
-                keyBoard.Visible = false;
+                imageSearch.Visible = false;
                 pictureBox1.Dock = DockStyle.Fill;
                 fullScreen = true;
             }
@@ -127,7 +128,7 @@ namespace forms_testing
                 leftBtn.Visible = true;
                 rightBtn.Visible = true;
                 printOptions.Visible = true;
-                keyBoard.Visible = true;
+                imageSearch.Visible = true;
                 pictureBox1.Dock = DockStyle.None;
                 fullScreen = false;
             }

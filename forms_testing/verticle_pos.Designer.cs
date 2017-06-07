@@ -30,9 +30,9 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.leftBtn = new System.Windows.Forms.Button();
-            this.keyBoard = new System.Windows.Forms.Button();
             this.rightBtn = new System.Windows.Forms.Button();
             this.printOptions = new System.Windows.Forms.Button();
+            this.imageSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,15 +57,6 @@
             this.leftBtn.UseVisualStyleBackColor = true;
             this.leftBtn.Click += new System.EventHandler(this.leftBtn_Click);
             // 
-            // keyBoard
-            // 
-            this.keyBoard.Location = new System.Drawing.Point(100, 772);
-            this.keyBoard.Name = "keyBoard";
-            this.keyBoard.Size = new System.Drawing.Size(140, 50);
-            this.keyBoard.TabIndex = 2;
-            this.keyBoard.Text = "Keyboard";
-            this.keyBoard.UseVisualStyleBackColor = true;
-            // 
             // rightBtn
             // 
             this.rightBtn.Location = new System.Drawing.Point(355, 666);
@@ -86,20 +77,29 @@
             this.printOptions.UseVisualStyleBackColor = true;
             this.printOptions.Click += new System.EventHandler(this.printOptions_Click);
             // 
-            // Form3
+            // imageSearch
+            // 
+            this.imageSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
+            this.imageSearch.Location = new System.Drawing.Point(100, 772);
+            this.imageSearch.Name = "imageSearch";
+            this.imageSearch.Size = new System.Drawing.Size(140, 50);
+            this.imageSearch.TabIndex = 5;
+            // 
+            // verticle_pos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 861);
+            this.Controls.Add(this.imageSearch);
             this.Controls.Add(this.printOptions);
             this.Controls.Add(this.rightBtn);
-            this.Controls.Add(this.keyBoard);
             this.Controls.Add(this.leftBtn);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form3";
+            this.Name = "verticle_pos";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,8 +107,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button leftBtn;
-        private System.Windows.Forms.Button keyBoard;
         private System.Windows.Forms.Button rightBtn;
         private System.Windows.Forms.Button printOptions;
+        private System.Windows.Forms.TextBox imageSearch;
     }
 }
